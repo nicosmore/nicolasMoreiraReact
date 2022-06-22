@@ -1,4 +1,6 @@
 import LogoGen from '../../Imagenes/LogoGeneric.png'
+import Cart from './CartWidget';
+
 
 const NavBar = () => {
     return (
@@ -13,9 +15,9 @@ const NavBar = () => {
                 <a style={styles.liStyle} href="">Contacto</a>
 
             </li>
-           
-
+            <Cart/>
             
+                        
         </nav>
     );
 
