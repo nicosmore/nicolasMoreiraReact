@@ -20,7 +20,7 @@ function Counter({stock, initial}) {
     return (
       <div style={styles.Style}>        
         <button onClick={quitar} style={styles.Boton}>-</button>
-        <imput style={styles.Boton}>{count}</imput>
+        <p style={styles.Boton}>{count}</p>
         <button onClick={sumar} style={styles.Boton}>+</button>
         <button onClick={onAdd} style={styles.Boton}>Comprar</button>        
       </div>

@@ -1,0 +1,5 @@
+[
+    {"id":0,"name": "Bisagra",  "img":"bis","descripcion": "asd"},
+    {"id":1,"name": "Corredera","img":"cor","descripcion": "asd"},
+    {"id":2,"name": "Tirador",  "img":"tir","descripcion": "asd"}
+]

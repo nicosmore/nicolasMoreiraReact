@@ -1,44 +1,35 @@
 import LogoGen from '../../Imagenes/LogoGeneric.png'
 import Cart from './CartWidget';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
 
 
 const NavBar = () => {
     return (
-        <nav style = {styles.navStyle}>
-            <img src={LogoGen} alt="logo"/>
-            <li>
-                <a style={styles.liStyle} href="">Cerraduras</a>
-                <a style={styles.liStyle} href="">Bisagras</a>
-                <a style={styles.liStyle} href="">Tiradores</a>
-                <a style={styles.liStyle} href="">Guias</a>
-                <a style={styles.liStyle} href="">Fijaciones</a>
-                <a style={styles.liStyle} href="">Contacto</a>
-
-            </li>
-            <Cart/>
+    <>
+        <Navbar bg="light">
+        <Container>
+          <Navbar.Brand href="#home"><img src={LogoGen} alt="logo"/></Navbar.Brand>
+          <Nav className="me-auto">
+            <Nav.Link href="#home">Home</Nav.Link>
+            <Nav.Link href="#Cerraduras">Cerraduras</Nav.Link>
+            <Nav.Link href="#Bisagras">Bisagras</Nav.Link>
+            <Nav.Link href="#Tiradores">Tiradores</Nav.Link>
+            <Nav.Link href="#Guias">Guias</Nav.Link>
+            <Nav.Link href="#Fijaciones">Fijaciones</Nav.Link>
+            <Nav.Link href="#Contacto">Contacto</Nav.Link>            
+        </Nav>
+          <Cart className=""/>
+        </Container>
+      </Navbar>
+    </>
+        
+            
             
                         
-        </nav>
+        
     );
 
 }
 export default NavBar
-
-const styles = {
-    navStyle:{
-        
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            
-        },
-
-    liStyle:{
-
-        padding: 40,
-        textDecoration:'none',
-        color: 'black',
-    },
-
-        
-}
