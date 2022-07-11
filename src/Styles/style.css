@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+.navContenedor{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.navMenu{
+   padding-inline: 10em;   
+ 
+}
+.navMenuText {
+    color: #292825;
+    text-decoration: none;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 1em;    
+    width: 80px;}
+
+ .navMenu a:hover {
+    text-decoration: underline;
+    color: black;
+  }
+
+  body {
+  padding: 2rem 0rem;
+}
+
+.like {
+  font-size: 1.5rem;
+}

@@ -1,35 +1,29 @@
 import LogoGen from '../../Imagenes/LogoGeneric.png'
 import Cart from './CartWidget';
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
+import '../../Styles/style.css'
+import { Link, NavLink } from 'react-router-dom';
+
+const categories=[
+  {name:"bisagra", id:0, route:"/bisagra"},
+  {name:"corredera", id:1, route:"/corredera"},
+  {name:"tirador", id:2, route:"/tirador"}  
+] 
 
 
 const NavBar = () => {
     return (
-    <>
-        <Navbar bg="light">
-        <Container>
-          <Navbar.Brand href="#home"><img src={LogoGen} alt="logo"/></Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#Cerraduras">Cerraduras</Nav.Link>
-            <Nav.Link href="#Bisagras">Bisagras</Nav.Link>
-            <Nav.Link href="#Tiradores">Tiradores</Nav.Link>
-            <Nav.Link href="#Guias">Guias</Nav.Link>
-            <Nav.Link href="#Fijaciones">Fijaciones</Nav.Link>
-            <Nav.Link href="#Contacto">Contacto</Nav.Link>            
-        </Nav>
-          <Cart className=""/>
-        </Container>
-      </Navbar>
-    </>
-        
-            
-            
-                        
-        
+    <div className='navContenedor'>
+    <Link to='/'><img src={LogoGen} alt=""/></Link>    
+    <nav className='navMenu'> 
+      {categories.map((category) => <NavLink key={category.id} className='navMenuText' to={category.route}>{category.name}</NavLink>)}           
+    </nav>   
+    <Link to='/cart'><Cart/></Link>  
+    </div> 
     );
 
 }
+
+
+
+
 export default NavBar

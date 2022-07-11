@@ -1,38 +1,28 @@
-import ItemCount from './ItemCount';
 import ItemList from './ItemList';
-import Productos from '../Listado/Productos'
-import Loading from '../Animaciones/Loading'
-import React,{useState, useEffect} from 'react'
-
-
-const cantidad = 10;
-const iniciar=1;
+import Loading from '../Animaciones/Loading';
+import React,{useState, useEffect} from 'react';
+import { useParams} from 'react-router-dom';
 
 
 const ItemListContainer = ({mensaje}) =>{
 
+    const {categoryName} = useParams();
     const [products, setProducts] = useState([]);
-    const [loading, setLoading] = useState(false);
+    const [laoded, setLoaded] = useState(true);
+
+    useEffect(() => {
+        const URL = categoryName ? `http://localhost:5000/productos/?categoria=${categoryName}`: 'http://localhost:5000/productos'
+        console.log(categoryName)
+        fetch(URL)
+            .then(res => res.json())
+            .then(data => setProducts(data))
+            .catch(err => console.log(err))
+            .finally(() => setLoaded(false))
+    }, [categoryName]); 
    
-    const promesa = new Promise((resolve,reject)=>{
-        
-        setTimeout(()=>{            
-            resolve(Productos)
-        },2000)
-        
-    });
     
-    useEffect(() =>{        
-        setLoading(true);
-        promesa.then((data)=>{
-            setLoading(false);
-            setProducts(data);
 
-        })          
-
-    },[]); 
-
-    if (loading){
+    if (laoded){
         return(
             <Loading/>
         )
@@ -41,7 +31,7 @@ const ItemListContainer = ({mensaje}) =>{
         <>
             <h3 className='row justify-content-center'>{mensaje}</h3> 
             <ItemList products={products}/>  
-            <ItemCount stock={cantidad} initial={iniciar}/>                
+                          
         </>
             
             

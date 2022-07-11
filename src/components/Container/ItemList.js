@@ -2,7 +2,7 @@ import Item from './Item'
 import React from 'react'
 
 const ItemList = ({products}) =>{    
-
+    
     
     return(
         <div className='row justify-content-center'>           
