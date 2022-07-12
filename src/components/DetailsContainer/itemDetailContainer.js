@@ -15,7 +15,8 @@ const ItemDetailContainer = ({mensajeDetail})=>{
     const {itemId}= useParams();
    
     useEffect(() => {
-        const URL = `http://localhost:5000/productos?id=${itemId}`
+        console.log(itemId)
+        const URL = `http://localhost:5000/productos/${itemId}`
         fetch(URL)
             .then(res => res.json())
             .then(data => setProducts(data))
