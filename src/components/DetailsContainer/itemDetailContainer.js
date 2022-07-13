@@ -1,11 +1,9 @@
 import ItemDetail  from './ItemDetail';
 import Loading from '../Animaciones/Loading';
 import React,{useState, useEffect} from 'react';
-import ItemCount from '../Container/ItemCount';
 import { useParams } from 'react-router-dom';
 
-const cantidad = 10;
-const iniciar=1;
+
 
 const ItemDetailContainer = ({mensajeDetail})=>{
 
@@ -33,8 +31,6 @@ const ItemDetailContainer = ({mensajeDetail})=>{
         <>
             <h3 className='row justify-content-center'>{mensajeDetail}</h3> 
             <ItemDetail products={products}/>  
-            <ItemCount stock={cantidad} initial={iniciar}/>                  
-           
         </>       
     )
 }

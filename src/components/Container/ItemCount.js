@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-function Counter({stock, initial}) {
+function Counter({stock, initial, onAdd}) {
 
     const [count, setCount] = useState(initial);
         
@@ -13,16 +13,16 @@ function Counter({stock, initial}) {
 
     }
 
-    const onAdd = () =>{
-        alert('Comprastes '+ count +' productos')
+    const addToCart = () =>{
+        onAdd(count)
     }
     
     return (
       <div style={styles.Style}>        
         <button onClick={quitar} style={styles.Boton}>-</button>
         <p style={styles.Boton}>{count}</p>
-        <button onClick={sumar} style={styles.Boton}>+</button>
-        <button onClick={onAdd} style={styles.Boton}>Comprar</button>        
+        <button onClick={sumar} style={styles.Boton}>+</button>        
+        <button onClick={onAdd} style={styles.Boton}>Agregar a Carrito</button>        
       </div>
     );
 }
