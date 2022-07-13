@@ -13,7 +13,8 @@ function Counter({stock, initial, onAdd}) {
 
     }
 
-    const addToCart = () =>{
+    const agregarCart = () =>{
+        
         onAdd(count)
     }
     
@@ -22,7 +23,7 @@ function Counter({stock, initial, onAdd}) {
         <button onClick={quitar} style={styles.Boton}>-</button>
         <p style={styles.Boton}>{count}</p>
         <button onClick={sumar} style={styles.Boton}>+</button>        
-        <button onClick={onAdd} style={styles.Boton}>Agregar a Carrito</button>        
+        <button onClick={agregarCart} style={styles.Boton}>Agregar a Carrito</button>        
       </div>
     );
 }
