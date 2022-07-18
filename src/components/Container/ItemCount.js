@@ -37,8 +37,7 @@ const styles = {
         justifyContent:'center',
         alignItems: 'center',      
         border: '1px solid black',  
-        marginLeft:'40%',
-        marginRight:'40%',         
+                
     },
 
     Boton:{

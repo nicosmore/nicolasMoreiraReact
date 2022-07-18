@@ -1,5 +1,5 @@
 import LogoGen from '../../Imagenes/LogoGeneric.png'
-import Cart from './CartWidget';
+import CartWidget from './CartWidget';
 import '../../Styles/style.css'
 import { Link, NavLink } from 'react-router-dom';
 
@@ -17,7 +17,7 @@ const NavBar = () => {
     <nav className='navMenu'> 
       {categories.map((category) => <NavLink key={category.id} className='navMenuText' to={category.route}>{category.name}</NavLink>)}           
     </nav>   
-    <Link to='/cart'><Cart/></Link>  
+    <Link to='/cart'><CartWidget/></Link>  
     </div> 
     );
 

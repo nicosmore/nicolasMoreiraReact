@@ -12,7 +12,7 @@ const ItemListContainer = ({mensaje}) =>{
 
     useEffect(() => {
         const URL = categoryName ? `http://localhost:5000/productos/?categoria=${categoryName}`: 'http://localhost:5000/productos'
-        console.log(categoryName)
+        
         fetch(URL)
             .then(res => res.json())
             .then(data => setProducts(data))

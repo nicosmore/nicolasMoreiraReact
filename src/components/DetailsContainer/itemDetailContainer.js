@@ -13,7 +13,7 @@ const ItemDetailContainer = ({mensajeDetail})=>{
     const {itemId}= useParams();
    
     useEffect(() => {
-        console.log(itemId)
+        
         const URL = `http://localhost:5000/productos/${itemId}`
         fetch(URL)
             .then(res => res.json())
@@ -30,7 +30,7 @@ const ItemDetailContainer = ({mensajeDetail})=>{
     return(
         <>
             <h3 className='row justify-content-center'>{mensajeDetail}</h3> 
-            <ItemDetail products={products}/>  
+            <ItemDetail products={products} style={{display: 'flex', justifyContent: 'center'}} />  
         </>       
     )
 }

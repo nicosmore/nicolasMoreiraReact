@@ -7,8 +7,8 @@
         "img":"https://ducasseindustrial.com/wp-content/uploads/2020/09/CL_4010082110_IMG_PROD1_BL.jpg",
         "descripcion": "Tirador en Aluminio anodizado natural, de 108mm de largo y 32mm de alto.",
         "categoria":"tirador",
-        "Precio":200,
-        "Stock":10
+        "precio":200,
+        "stock":10
 
     },
     {
@@ -17,8 +17,8 @@
         "img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMzqZlNESN4XgyebQLqsOMTNEWwSkdX4PzEU_u-F6jztGRZsPDjxomEUzsTyBqNqv4mmA&usqp=CAU",
         "descripcion": "Tirador en Aluminio anodizado natural, de 108mm de largo y 32mm de alto.",
         "categoria":"tirador",
-        "Precio":200,
-        "Stock":10
+        "precio":200,
+        "stock":10
     },    
     {
         "id":2,
@@ -26,8 +26,8 @@
         "img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShQ1LrJ4ag96B7FLL-a1X98TjP79cfLc-LLrURj7xFwTY3ZQ57fT2QGKTDlMT1DXrg1CQ&usqp=CAU",
         "descripcion": "Tirador en Aluminio anodizado natural, de 108mm de largo y 32mm de alto.",
         "categoria":"tirador",
-        "Precio":200,
-        "Stock":10
+        "precio":200,
+        "stock":10
     },
 
         {"id":3,
@@ -35,8 +35,8 @@
         "img":"https://www.hafele.es/INTERSHOP/static/WFS/Haefele-HES-Site/-/Haefele/es_ES/pim/images/default/ppic-04080660.jpg",
         "descripcion": "Bisagra oculta, Häfele ,gemelo para puertas de madera, con amortiguación",
         "categoria":"bisagra",
-        "Precio":200,
-        "Stock":10
+        "precio":200,
+        "stock":10
     },
 
         {"id":4,
@@ -44,8 +44,8 @@
         "img":"https://www.montecuir.com/pics/productos/10518/1_thumb.png",
         "descripcion": "Bisagra oculta, Häfele ,gemelo para puertas de madera, con amortiguación",
         "categoria":"bisagra",
-        "Precio":200,
-        "Stock":10
+        "precio":200,
+        "stock":10
     },
 
         {"id":5,
@@ -53,8 +53,8 @@
         "img":"https://www.montecuir.com/pics/productos/10525/0_thumb.jpg",
         "descripcion": "Bisagra oculta, Häfele ,gemelo para puertas de madera, con amortiguación",
         "categoria":"bisagra",
-        "Precio":200,
-        "Stock":10
+        "precio":200,
+        "stock":10
     },
 
     {
@@ -63,8 +63,8 @@
         "img":"https://http2.mlstatic.com/D_NQ_NP_798574-MLA43976373771_112020-O.webp",
         "descripcion": "Guía de 300mm de largo, con Sobre Extensión,en Acero Galvanizado.",
         "categoria":"corredera",
-        "Precio":200,
-        "Stock":10
+        "precio":200,
+        "stock":10
     },
     {
         "id":7,
@@ -72,8 +72,8 @@
         "img":"https://ducasseindustrial.com/ar/wp-content/uploads/sites/17/2020/10/AR_40121167_IMG_PROD1_BL-1024x576.jpg",
         "descripcion": "Guía de 300mm de largo, con Sobre Extensión,en Acero Galvanizado.",
         "categoria":"corredera",
-        "Precio":200,
-        "Stock":10
+        "precio":200,
+        "stock":10
     },
     {
         "id":8,
@@ -81,8 +81,8 @@
         "img":"https://image.dhgate.com/0x0/f2/albu/g9/M01/14/95/rBVaVVzg3EaAD25tAARxBtV36Aw344.jpg",
         "descripcion": "Guía de 300mm de largo, con Sobre Extensión,en Acero Galvanizado.",
         "categoria":"corredera",
-        "Precio":200,
-        "Stock":10
+        "precio":200,
+        "stock":10
     }
 ]
 }
