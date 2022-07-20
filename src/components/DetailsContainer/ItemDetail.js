@@ -16,7 +16,7 @@ const ItemDetail = ({products})=>{
     }
 
     return(
-        <div style={{margin:5,padding:20 ,border:'2px solid grey',height:700, display: 'grid',justifyContent:'center'}}>
+        <div style={{margin:5,padding:20 ,border:'2px solid grey',height:600,width:920, display: 'grid',justifyContent:'center'}}>
             <h2 
                 style={{
                     margin:5,

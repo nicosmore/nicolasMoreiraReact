@@ -29,8 +29,8 @@ const ItemListContainer = ({mensaje}) =>{
     }    
     return(
         <>
-            <h3 className='row justify-content-center'>{mensaje}</h3> 
-            <ItemList products={products}/>  
+            <h3>{mensaje}</h3> 
+            <ItemList style={{display: 'flex', justifyContent: 'center'}} products={products}/>  
                           
         </>
             
@@ -38,5 +38,8 @@ const ItemListContainer = ({mensaje}) =>{
     )
        
 }
+
+
+
 export default ItemListContainer
 

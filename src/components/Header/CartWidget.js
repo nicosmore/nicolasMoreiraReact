@@ -5,10 +5,13 @@ import { cartContext } from '../../Context/CartContext';
 
 const CartWidget = () =>{
     const {quantity}= useContext(cartContext);
-    
+    var cantidad = quantity === 0 ? (true) : (false);
 
     return(
-    <h2 style={{color:'black', display:'flex', alignItems: 'center', textDecoration: 'none'}}>{quantity}<BsCart3 /> </h2>
+    <>{ quantity === 0  
+    ? <h2 style={{color:'black', display:'flex', alignItems: 'center', textDecoration: 'none'}}><BsCart3 /></h2>
+    : <h2 style={{color:'black', display:'flex', alignItems: 'center', textDecoration: 'none'}}>{quantity}<BsCart3 /> </h2>}
+    </>
     )
     
 }
