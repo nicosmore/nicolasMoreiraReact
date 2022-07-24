@@ -2,7 +2,8 @@ import ItemList from './ItemList';
 import Loading from '../Animaciones/Loading';
 import React,{useState, useEffect} from 'react';
 import { useParams} from 'react-router-dom';
-
+import { db } from '../../firebase/firebase';
+import { getDocs, collection, query, where } from 'firebase/firestore';
 
 const ItemListContainer = ({mensaje}) =>{
 
@@ -11,13 +12,36 @@ const ItemListContainer = ({mensaje}) =>{
     const [laoded, setLoaded] = useState(true);
 
     useEffect(() => {
-        const URL = categoryName ? `http://localhost:5000/productos/?categoria=${categoryName}`: 'http://localhost:5000/productos'
+
+        const productCollection = categoryName
+        ? query (collection(db,'productos'),where('categoria','==',categoryName))
+        :collection(db,'productos');
+        /* const q = query(productColection, where('categoryName', '==','??' )) */
+
+        getDocs(productCollection)
+            .then(result =>{                
+                 const lista = result.docs.map(doc =>{             
+
+                    return {
+                        id: doc.id,
+                        ...doc.data(),
+                    }
+                }) 
+                setProducts(lista); 
+            })
+            .catch(err => console.log(err))
+            .finally(() => setLoaded(false))
+
+        /* const URL = categoryName 
+        ? `http://localhost:5000/productos/?categoria=${categoryName}`
+        : 'http://localhost:5000/productos'
         
         fetch(URL)
             .then(res => res.json())
             .then(data => setProducts(data))
             .catch(err => console.log(err))
-            .finally(() => setLoaded(false))
+            .finally(() => setLoaded(false)) */
+
     }, [categoryName]); 
    
     

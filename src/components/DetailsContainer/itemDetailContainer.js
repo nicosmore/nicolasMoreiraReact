@@ -2,7 +2,8 @@ import ItemDetail  from './ItemDetail';
 import Loading from '../Animaciones/Loading';
 import React,{useState, useEffect} from 'react';
 import { useParams } from 'react-router-dom';
-
+import { db } from '../../firebase/firebase';
+import { getDoc, collection, doc } from 'firebase/firestore';
 
 
 const ItemDetailContainer = ({mensajeDetail})=>{
@@ -13,13 +14,28 @@ const ItemDetailContainer = ({mensajeDetail})=>{
     const {itemId}= useParams();
    
     useEffect(() => {
-        
-        const URL = `http://localhost:5000/productos/${itemId}`
+
+        const productCollection = collection(db,'productos');
+        const refDoc =doc(productCollection, itemId);
+        getDoc(refDoc)
+        .then(result =>{
+            const producto = {
+                id: result.id,
+                ...result.data(),
+            }
+            setProducts(producto);
+        })
+        .catch(err => console.log(err))
+        .finally(() => setLoading(false))
+
+
+    /*     const URL = `http://localhost:5000/productos/${itemId}`
         fetch(URL)
             .then(res => res.json())
             .then(data => setProducts(data))
             .catch(err => console.log(err))
-            .finally(() => setLoading(false))
+            .finally(() => setLoading(false)) */
+
     }, [itemId]); 
 
     if (loading){
