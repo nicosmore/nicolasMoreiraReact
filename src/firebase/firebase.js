@@ -7,7 +7,7 @@ const firebaseConfig = {
   projectId: "proyectoreact-8459a",
   storageBucket: "proyectoreact-8459a.appspot.com",
   messagingSenderId: "410387131942",
-  appId: "1:410387131942:web:b78a4359593afdbad680e7"
+  appId: "1:410387131942:web:b78a4359593afdbad680e7",
 };
 
 // Initialize Firebase
