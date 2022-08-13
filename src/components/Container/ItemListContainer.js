@@ -15,8 +15,7 @@ const ItemListContainer = ({mensaje}) =>{
 
         const productCollection = categoryName
         ? query (collection(db,'productos'),where('categoria','==',categoryName))
-        :collection(db,'productos');
-        /* const q = query(productColection, where('categoryName', '==','??' )) */
+        :collection(db,'productos');       
 
         getDocs(productCollection)
             .then(result =>{                
@@ -52,11 +51,11 @@ const ItemListContainer = ({mensaje}) =>{
         )
     }    
     return(
-        <>
-            <h3>{mensaje}</h3> 
-            <ItemList style={{display: 'flex', justifyContent: 'center'}} products={products}/>  
+        <div className="container">
+            <h4 className="d-flex justify-content-center border-top pt-3 fw-normal">{mensaje}</h4> 
+            <ItemList products={products}/>  
                           
-        </>
+        </div>
             
             
     )

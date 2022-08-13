@@ -45,7 +45,7 @@ const ItemDetailContainer = ({mensajeDetail})=>{
     }    
     return(
         <>
-            <h3 className='row justify-content-center'>{mensajeDetail}</h3> 
+            <h4 className="d-flex justify-content-center border-top pt-3 fw-normal">{mensajeDetail}</h4> 
             <ItemDetail products={products} style={{display: 'flex', justifyContent: 'center'}} />  
         </>       
     )

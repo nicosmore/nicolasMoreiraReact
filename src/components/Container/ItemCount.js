@@ -19,32 +19,20 @@ function Counter({stock, initial, onAdd}) {
     }
     
     return (
-      <div style={styles.Style}>        
-        <button onClick={quitar} style={styles.Boton}>-</button>
-        <p style={styles.Boton}>{count}</p>
-        <button onClick={sumar} style={styles.Boton}>+</button>        
-        <button onClick={agregarCart} style={styles.Boton}>Agregar a Carrito</button>        
-      </div>
+    <div className='container'>
+        <div className='row row-cols-3 align-items-center m-2 p-0 border'>        
+            <button className='btn btn-sm btn-primary fs-4 p-0' onClick={quitar}>-</button>
+            <h5 className='m-0 p-1 fw-normal'>{count}</h5>
+            <button className='btn btn-sm btn-primary fs-4 p-0' onClick={sumar}>+</button>
+        </div>
+        <div>
+            { }
+            <button className='btn btn-primary' onClick={agregarCart}>Agregar a Carrito</button>
+        </div>       
+    </div>   
+      
     );
 }
   
 export default Counter
 
-const styles = {
-    Style: {
-        display:'flex',                
-        padding:5,   
-        justifyContent:'center',
-        alignItems: 'center',      
-        border: '1px solid black',  
-                
-    },
-
-    Boton:{
-        padding:10,
-        margin:5,
-
-    }
-        
-    
-}

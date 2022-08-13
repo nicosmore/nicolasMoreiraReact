@@ -4,21 +4,26 @@ import '../../Styles/style.css'
 import { Link, NavLink } from 'react-router-dom';
 
 const categories=[
-  {name:"bisagra", id:0, route:"/bisagra"},
-  {name:"corredera", id:1, route:"/corredera"},
-  {name:"tirador", id:2, route:"/tirador"}  
+  {name:"Bisagras", id:0, route:"/Bisagras"},
+  {name:"Correderas", id:1, route:"/Correderas"},
+  {name:"Tiradores", id:2, route:"/Tiradores"}  
 ] 
 
 
 const NavBar = () => {
     return (
-    <div className='navContenedor'>
-    <Link to='/'><img src={LogoGen} alt=""/></Link>    
-    <nav className='navMenu'> 
-      {categories.map((category) => <NavLink key={category.id} className='navMenuText' to={category.route}>{category.name}</NavLink>)}           
-    </nav>   
-    <Link to='/cart'><CartWidget/></Link>  
-    </div> 
+    <div className="container">
+      <div className="d-flex justify-content-between align-items-center">
+        <Link to='/'><img src={LogoGen} alt=""/></Link>  
+        <Link to='/cart' className='pt-2'><CartWidget/></Link>
+      </div>
+        <div className='navContenedor'>
+          <nav className='navMenu fs-5 pb-2'> 
+            {categories.map((category) => <NavLink key={category.id} className='navMenuText' to={category.route}>{category.name}</NavLink>)}           
+          </nav>         
+        </div> 
+    </div>
+    
     );
 
 }

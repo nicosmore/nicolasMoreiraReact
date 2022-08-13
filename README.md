@@ -1,6 +1,15 @@
-/* Proyecto de e-commerce de herrajes
+##Proyecto de e-commerce de Herrajes
 
-El proyecto funciona con una api rest hecha con json-server (instalar antes de ejecutar)
+**INFORMACION**
 
-Antes de realizar npm start en el proyecto ejecutar en otra terminal npm run fake-api */
+* Curso: React
+* Comision: 37830
+* Alumno: Nicolas Moreira
+
+
+**CARACTERISTICAS**
+* Base de Datos: Firestore
+
+
+
 

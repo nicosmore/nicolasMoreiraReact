@@ -6,18 +6,17 @@ import { Link } from "react-router-dom";
 
 const Item = ({product}) => {
 
-    return(
-        
-        <Card className='m-2' style={{ width: '16rem',}}>             
-            <Card.Img variant="top" className='fluid' src={product.img} style={{ }}/>
-            <Card.Header className='fs-5'>{product.name}</Card.Header>
-            <Card.Body className='row'>                
-                <Card.Text >{product.descripcion}</Card.Text>
-                <Link to={`/productos/${product.id}`}>
-                    <Button className='' variant="primary" style={{ }}>Comprar</Button>
-                </Link>
-            </Card.Body>
-        </Card>       
+    return(        
+        <div className='card m-2 p-2 col-sm-5 col-md-4 col-lg-3 text-center rounded-0'>             
+            <img className='' src={product.img} alt=""></img>            
+            <div className='card-body'>
+                <h5 className='card-title text-capitalize'>{product.name}</h5>  
+                <p className='card-subtitle text-muted'>Categoria: {product.categoria}</p>              
+                <p className='card-text fs-5'>${product.precio}</p>
+                <Link to={`/productos/${product.id}`} className='btn btn-outline-primary rounded-0'>Ampliar Info</Link>       
+                
+            </div>
+        </div>       
     )   
 }   
 

@@ -19,15 +19,28 @@
     padding: 1em;    
     width: 80px;}
 
- .navMenu a:hover {
-    text-decoration: underline;
-    color: rgb(156, 156, 156);
-  }
-
-  body {
-  padding: 2rem 0rem;
+.navMenu a:hover {
+  text-decoration: underline;
+  color: rgb(156, 156, 156);
 }
+  
+body {
+  margin: 0;
+  padding: 0;
+  padding: 2rem 0rem;
 
+}
 .like {
   font-size: 1.5rem;
+}
+.card{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+}
+#textCart{  
+  text-decoration: none;
+  color:black; 
+}
+
+.shadowT{
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.26);
 }

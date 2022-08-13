@@ -16,39 +16,21 @@ const ItemDetail = ({products})=>{
     }
 
     return(
-        <div style={{margin:5,padding:20 ,border:'2px solid grey',height:600,width:920, display: 'grid',justifyContent:'center'}}>
-            <h2 
-                style={{
-                    margin:5,
-                    padding:5, 
-                    display: 'flex', 
-                    justifyContent:'center'
-                    }}>
-                {products.name}
-            </h2>
-            <div style={{display: 'flex', 
-                        justifyContent:'center'}}>
-                <img 
-                    src={products.img} 
-                    style={{
-                        height:300, 
-                        marginLeft:10,
-                        marginRight:10, 
-                        display: 'flex', 
-                        justifyContent:'center'}} 
-                    alt="">
-                </img>
+        <div className='container card col-6 text-center'>
+            <h4 className='d-flex justify-content-center border-bottom pt-3 fw-normal text-uppercase '>{products.name}</h4>
+            <div className='row row-cols-2 p-4'>
+                <img src={products.img} alt="" className='fluid border'></img>
+                <div>
+                    <h5 className='fw-normal m-4'>Descripción:</h5>
+                    <h5 className='fw-normal m-4'>{products.descripcion}</h5>
+                    {compra 
+                    ? <ItemCount stock={products.stock} initial={iniciar} onAdd={onAdd} /> 
+                    :<Link to="/cart">
+                        <button className='btn btn-outline-primary'>Finalizar compra</button>
+                    </Link>}
+                </div>
             </div>
-            <p >{products.descripcion}</p>
-
-            {compra 
-            ? <ItemCount stock={products.stock} initial={iniciar} onAdd={onAdd} style={{display: 'flex'}}/> 
-            :<Link to="/cart">
-                <button>Finalizar compra</button>
-            </Link>}
-
-        </div>
-        
+        </div>        
     );
 }
 
