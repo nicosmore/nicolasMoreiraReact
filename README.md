@@ -21,6 +21,6 @@
 
 **Links**
 [Repositorio GIT](https://github.com/nicosmore/nicolasMoreiraReact)
-[Ir a proyecto](www.github.com)
+[Ir a proyecto](https://thunderous-basbousa-ba3b4d.netlify.app/)
 
 
